@@ -7,9 +7,9 @@
  http://www.arduino.cc/en/Tutorial/Knob
 */
 
-// ++++++ ARDUINO #2 ++++++
+// ++++++ ARDUINO #2 ++++++ NANO +++++++
 
-#include <Servo.h>
+//#include <Servo.h>
 
 Servo esc2;  // create servo object to control a servo
 Servo esc4;  // 2, 4, 6 are driven by Arduino 2 (1,3,5 by Arduino 1)
@@ -19,10 +19,10 @@ Servo esc6;
 int potpin = 0;  // analog pin used to connect the potentiometer
 int val;    // variable to read the value from the analog pin
 
-void setup() {
-  esc2.attach(2);
-  esc4.attach(4);
-  esc6.attach(6);  // attaches the servo on pin 4 to the servo object
+void setup() { // attaches the servo on pin 11 to the servo object
+  esc2.attach(9);   // 2 = Green
+  esc4.attach(10);  // 4 = Green stripe
+  esc6.attach(11);  // 6 = Orange stripe
 
   esc2.writeMicroseconds(1000);
   esc4.writeMicroseconds(1000); //initialise to 1000

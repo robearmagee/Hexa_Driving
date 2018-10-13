@@ -7,7 +7,7 @@
  http://www.arduino.cc/en/Tutorial/Knob
 */
 
-// ++++++ ARDUINO #1 ++++++
+// ++++++ ARDUINO #1 ++++++ UNO ++++++
 
 #include <Servo.h>
 
@@ -20,9 +20,9 @@ int potpin = 0;  // analog pin used to connect the potentiometer
 int val;    // variable to read the value from the analog pin
 
 void setup() {
-  esc1.attach(1);
-  esc3.attach(3);
-  esc5.attach(5);  // attaches the servo on pin 5 to the servo object
+  esc1.attach(3);
+  esc3.attach(5);
+  esc5.attach(6);  // attaches the servo on pin 6 to the servo object
 
   esc1.writeMicroseconds(1000);
   esc3.writeMicroseconds(1000); //initialise to 1000
